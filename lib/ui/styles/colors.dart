@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-const bgColor = Color(0xFF252525);
 const tileColors = [
   Color(0xFFffab91),
   Color(0xFFffcc80),

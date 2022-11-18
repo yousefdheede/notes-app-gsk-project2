@@ -15,11 +15,10 @@ class NoteDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(12.0),
         child: FloatingActionButton(
-          backgroundColor: const Color(0xFF3B3B3B),
+          backgroundColor: Colors.pinkAccent,
           onPressed: () {
             Get.to(() => AddNotePage(
                   isUpdate: true,
@@ -53,6 +52,18 @@ class NoteDetailPage extends StatelessWidget {
             },
             icon: Icons.keyboard_arrow_left,
           ),
+
+          /*
+         IconButton(
+              onPressed: () {
+                Provider.of<TodoClass>(context, listen: false)
+                    .changeIsDarkMode();
+              },
+              icon: Icon(Provider.of<TodoClass>(context).isDarkMode
+                  ? Icons.light_mode
+                  : Icons.dark_mode))
+          ,
+         */
           MyIconButton(
             onTap: () {
               _deleteNoteFromDB();

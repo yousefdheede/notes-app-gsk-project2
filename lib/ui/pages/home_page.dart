@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:note_app/core/controllers/note_controller.dart';
+import 'package:note_app/main.dart';
 import 'package:note_app/ui/pages/add_note_page.dart';
 import 'package:note_app/ui/styles/colors.dart';
 import 'package:note_app/ui/styles/text_styles.dart';
@@ -38,7 +39,6 @@ class HomePage extends StatelessWidget {
       floatingActionButton: Padding(
         padding: const EdgeInsets.all(12.0),
         child: FloatingActionButton(
-          backgroundColor: const Color(0xFF3B3B3B),
           onPressed: () {
             Get.to(
               const AddNotePage(
@@ -50,7 +50,6 @@ class HomePage extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
       ),
-      backgroundColor: bgColor,
       body: SafeArea(
         child: Column(
           children: [
@@ -73,12 +72,17 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Notes",
-            style: titleTextStyle.copyWith(fontSize: 32),
+            "MY DIARI",
+            style: titleTextStyle.copyWith(
+                fontSize: 32, color: Color.fromARGB(255, 2, 167, 243)),
           ),
           MyIconButton(
             onTap: () {},
             icon: Icons.search,
+          ),
+          MyIconButton(
+            icon: Icons.light_mode,
+            onTap: () {},
           ),
         ],
       ),

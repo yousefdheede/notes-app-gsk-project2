@@ -4,22 +4,27 @@ import 'package:get/get.dart';
 import 'package:note_app/core/db/db_helper.dart';
 import 'package:note_app/ui/pages/home_page.dart';
 
+import 'provider/theme_provider.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await DBHelper.initDb();
-  runApp(const MyApp());
+  runApp(const AppInit());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppInit extends StatelessWidget {
+  const AppInit({super.key});
 
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
-    return GetMaterialApp(
-      title: "Flutter Note App",
+    return MaterialApp(
+      themeMode: ThemeMode.light,
+      theme: MyThemes.lightTheme,
+      darkTheme: MyThemes.darkTheme,
+      title: "MY DIARY",
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );

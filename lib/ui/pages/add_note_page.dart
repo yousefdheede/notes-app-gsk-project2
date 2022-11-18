@@ -35,7 +35,6 @@ class AddNotePageState extends State<AddNotePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
       body: SafeArea(
         child: Column(
           children: [
@@ -88,10 +87,10 @@ class AddNotePageState extends State<AddNotePage> {
               hintText: "Title",
               hintStyle: titleTextStyle.copyWith(color: Colors.grey),
               focusedBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: bgColor),
+                borderSide: BorderSide(color: Colors.black),
               ),
               enabledBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: bgColor),
+                borderSide: BorderSide(color: Colors.black),
               ),
             ),
           ),
@@ -108,10 +107,10 @@ class AddNotePageState extends State<AddNotePage> {
               hintText: "Type something...",
               hintStyle: bodyTextStyle,
               focusedBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: bgColor),
+                borderSide: BorderSide(color: Colors.black),
               ),
               enabledBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: bgColor),
+                borderSide: BorderSide(color: Colors.black),
               ),
             ),
           ),
