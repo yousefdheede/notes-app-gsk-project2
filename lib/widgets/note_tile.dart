@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:note_app/models/models/note_model.dart';
-import 'package:note_app/ui/pages/note_detailed_page.dart';
+import 'package:note_app/pages/note_detailed_page.dart';
 import 'package:note_app/ui/styles/colors.dart';
 import 'package:note_app/ui/styles/text_styles.dart';
 

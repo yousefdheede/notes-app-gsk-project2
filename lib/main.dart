@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:note_app/models/db/db_helper.dart';
-import 'package:note_app/ui/pages/home_page.dart';
+import 'package:note_app/pages/home_page.dart';
 
 import 'provider/theme_provider.dart';
 

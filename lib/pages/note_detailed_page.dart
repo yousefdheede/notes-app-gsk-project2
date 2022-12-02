@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:note_app/models/controllers/note_controller.dart';
 import 'package:note_app/models/models/note_model.dart';
-import 'package:note_app/ui/pages/add_note_page.dart';
-import 'package:note_app/ui/styles/colors.dart';
+import 'package:note_app/pages/add_note_page.dart';
 import 'package:note_app/ui/styles/text_styles.dart';
-import 'package:note_app/ui/widgets/icon_button.dart';
+import 'package:note_app/widgets/icon_button.dart';
 
 class NoteDetailPage extends StatelessWidget {
   final Note note;
@@ -52,18 +51,6 @@ class NoteDetailPage extends StatelessWidget {
             },
             icon: Icons.keyboard_arrow_left,
           ),
-
-          /*
-         IconButton(
-              onPressed: () {
-                Provider.of<TodoClass>(context, listen: false)
-                    .changeIsDarkMode();
-              },
-              icon: Icon(Provider.of<TodoClass>(context).isDarkMode
-                  ? Icons.light_mode
-                  : Icons.dark_mode))
-          ,
-         */
           MyIconButton(
             onTap: () {
               _deleteNoteFromDB();

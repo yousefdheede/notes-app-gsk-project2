@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:note_app/models/controllers/note_controller.dart';
 import 'package:note_app/models/models/note_model.dart';
-import 'package:note_app/ui/pages/home_page.dart';
+import 'package:note_app/pages/home_page.dart';
 import 'package:note_app/ui/styles/colors.dart';
 import 'package:note_app/ui/styles/text_styles.dart';
-import 'package:note_app/ui/widgets/icon_button.dart';
+import 'package:note_app/widgets/icon_button.dart';
 
 class AddNotePage extends StatefulWidget {
   final bool isUpdate;

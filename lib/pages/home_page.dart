@@ -3,11 +3,12 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:note_app/models/controllers/note_controller.dart';
 import 'package:note_app/main.dart';
-import 'package:note_app/ui/pages/add_note_page.dart';
+import 'package:note_app/pages/add_note_page.dart';
+import 'package:note_app/provider/theme_provider.dart';
 import 'package:note_app/ui/styles/colors.dart';
 import 'package:note_app/ui/styles/text_styles.dart';
-import 'package:note_app/ui/widgets/icon_button.dart';
-import 'package:note_app/ui/widgets/note_tile.dart';
+import 'package:note_app/widgets/icon_button.dart';
+import 'package:note_app/widgets/note_tile.dart';
 
 class HomePage extends StatelessWidget {
   final _notesController = Get.put(NoteController());
@@ -82,7 +83,13 @@ class HomePage extends StatelessWidget {
           ),
           MyIconButton(
             icon: Icons.light_mode,
-            onTap: () {},
+            onTap: () {
+              if (MyThemes.lightTheme == true) {
+                MyThemes.darkTheme;
+              } else if (MyThemes.darkTheme == true) {
+                MyThemes.lightTheme;
+              }
+            },
           ),
         ],
       ),
@@ -110,36 +117,6 @@ class HomePage extends StatelessWidget {
                         tileType: _tileTypes[i % 7],
                       ))
               ]);
-          // itemCount: _notesController.noteList.length,
-          // itemBuilder: (context, index)
-          // {
-          //   return NoteTile(
-          //     tileType: _tileTypes[index % 7],
-          //     note: _notesController.noteList[index],
-          //   );
-          // },
-          // StaggeredGridTileBuilder: (int index) => _tileCounts[index % 7]);
-
-          // return StaggeredGridView.count(
-          //   crossAxisCount: 4,
-          //   StaggeredGridTiles: _StaggeredGridTiles,
-          //   mainAxisSpacing: 12,
-          //   crossAxisSpacing: 12,
-          //   children: _notesController.noteList
-          //       .map((n) => NoteTile(
-          //             note: n,
-          //           ))
-          //       .toList(),
-          // );
-
-          // ListView.builder(
-          //     itemCount: _notesController.noteList.length,
-          //     itemBuilder: (context, index) {
-          //       return NoteTile(
-          //         note: _notesController.noteList[index],
-          //       );
-          //     });
-
         } else {
           return Center(
             child: Text("Empty", style: titleTextStyle),
