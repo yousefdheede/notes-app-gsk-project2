@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:note_app/core/db/db_helper.dart';
+import 'package:note_app/models/db/db_helper.dart';
 import 'package:note_app/ui/pages/home_page.dart';
 
 import 'provider/theme_provider.dart';
@@ -20,7 +20,7 @@ class AppInit extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
-    return MaterialApp(
+    return GetMaterialApp(
       themeMode: ThemeMode.light,
       theme: MyThemes.lightTheme,
       darkTheme: MyThemes.darkTheme,
